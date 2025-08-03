@@ -4,7 +4,8 @@ services:
     env: python
     plan: free
     buildCommand: ""
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: OPENAI_API_KEY
         value: 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
+
