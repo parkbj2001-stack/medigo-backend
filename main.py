@@ -16,7 +16,7 @@ app.add_middleware(
 )
 
 # OpenAI API 키 설정 – 환경변수 또는 직접 입력
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # 요청받을 데이터 형식 정의
 class Request(BaseModel):
@@ -61,4 +61,5 @@ async def diagnose(req: Request):
             {"sender": "bot", "message_text": reply}
         ]
     }
+
 
